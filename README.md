@@ -1,6 +1,6 @@
 # Red Hat Blog Posts
 
-A collection of engineering blog posts from Red Hat team members.
+A collection of my engineering blog posts related to Red Hat technologies.
 
 ---
 
@@ -14,13 +14,6 @@ A collection of engineering blog posts from Red Hat team members.
 
 ---
 
-## Contributing
-
-To add a new blog post:
-1. Create a markdown file in the `posts/` directory
-2. Update this README with a link to your post
-3. Submit a PR
-
 ---
 
-*Maintained by [@sebrandon1](https://github.com/sebrandon1)*
+*By [@sebrandon1](https://github.com/sebrandon1)*
