@@ -2,6 +2,8 @@
 
 A collection of my engineering blog posts related to Red Hat technologies.
 
+See also: [redhat-highlights](https://github.com/sebrandon1/redhat-highlights) for quick summaries
+
 ---
 
 ## Blog Posts
