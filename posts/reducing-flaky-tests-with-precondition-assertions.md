@@ -229,6 +229,44 @@ func HasWorkerNodes() bool {
 
 5. **Sometimes the fix reveals the real problem.** Adding assertions to 4.14 didn't fix it, but it proved the issue was upstream in certsuite, not in our test infrastructure.
 
+## How AI Accelerated the Solution
+
+This entire investigation and fix was completed in a single session using [Claude Code](https://claude.ai/code), Anthropic's CLI tool for software engineering.
+
+### The Workflow
+
+The process was collaborative and iterative:
+
+1. **Problem analysis**: I described the flaky test failures. Claude Code explored the codebase, read the failing test files, and analyzed what the certsuite tests actually check (MCO access, podman diff, boot params).
+
+2. **Plan creation**: Claude Code created a detailed implementation plan in markdown, identifying the gaps in existing assertions and proposing the three-layer approach. I reviewed and approved before any code was written.
+
+3. **Implementation**: Claude Code edited 7 test files, adding consistent assertion patterns across all of them. The edits followed Go conventions and matched the existing code style.
+
+4. **CI integration**: After committing and pushing to a PR, Claude Code monitored the CI pipeline—40+ checks across multiple OCP versions. When checks passed, it merged the PR.
+
+5. **Validation**: Claude Code triggered new workflow runs across OCP 4.14-4.20 and KinD, then monitored them overnight. When failures occurred, it pulled the logs and identified the root cause.
+
+### What AI Did Well
+
+- **Codebase exploration**: Quickly found all 7 files that needed changes and understood the existing patterns
+- **Consistent application**: Applied the same assertion pattern across Deployments, DaemonSets, and StatefulSets without copy-paste errors
+- **CI automation**: Triggered workflows, monitored progress, re-ran failures, and parsed logs—all through `gh` CLI commands
+- **Root cause analysis**: When 4.14 still failed, analyzed the claim.json errors to determine certsuite was skipping tests internally
+
+### What Required Human Judgment
+
+- Deciding *which* preconditions mattered (MCO health vs. other checks)
+- Approving the plan before implementation
+- Choosing to re-roll the 4.14 cluster manually
+- Deciding when the investigation was "done enough"
+
+### Time Savings
+
+What would have taken most of a day—reading 7 files, understanding the test patterns, implementing consistent changes, creating a PR, monitoring CI across 6 OCP versions—was completed in a few hours of interactive work. The overnight CI monitoring happened autonomously while I did other things.
+
+This isn't about replacing engineering judgment. It's about offloading the mechanical parts—file navigation, repetitive edits, CI babysitting—so I can focus on the decisions that matter.
+
 ## Closing
 
 Flaky tests erode trust in CI. When tests fail intermittently without clear reasons, teams start ignoring failures, re-running pipelines "just to see if it passes," and losing confidence in their safety nets.
