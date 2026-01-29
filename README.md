@@ -12,6 +12,12 @@ A collection of my engineering blog posts related to Red Hat technologies.
 |-------|--------|------|-------------|
 | [Managing 650+ PRs Across 878 Repositories with Claude CLI](posts/telco-bot-automation.md) | Brandon Palm | January 2025 | How the Telco Security team uses Claude CLI to automate dependency tracking across 878 repositories |
 
+### CI Reliability
+
+| Title | Author | Date | Description |
+|-------|--------|------|-------------|
+| [Reducing Flaky Tests with Precondition Assertions and Strategic Test Grouping](posts/reducing-flaky-tests-with-precondition-assertions.md) | Brandon Palm | January 2026 | How precondition assertions and focused It() blocks fixed OCP version-specific test failures |
+
 ---
 
 ---
