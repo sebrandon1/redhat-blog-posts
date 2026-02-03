@@ -8,6 +8,12 @@ See also: [redhat-highlights](https://github.com/sebrandon1/redhat-highlights) f
 
 ## Blog Posts
 
+### Certification & Best Practices
+
+| Title | Author | Date | Description |
+|-------|--------|------|-------------|
+| [Why Use Certsuite: Your Fast Track to CNF Certification](posts/why-use-certsuite-for-cnf-certification.md) | Brandon Palm | February 2026 | How certsuite helps partners validate CNF workloads against Red Hat best practices before certification |
+
 ### Automation & Tooling
 
 | Title | Author | Date | Description |
