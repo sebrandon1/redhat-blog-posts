@@ -59,4 +59,4 @@ This small change should help partners:
 
 ---
 
-*[PR #405](https://github.com/redhat-best-practices-for-k8s/oct/pull/405) | [OCT Repository](https://github.com/redhat-best-practices-for-k8s/oct)*
+*[PR #405](https://github.com/redhat-best-practices-for-k8s/oct/pull/405) | [OCT Repository](https://github.com/redhat-best-practices-for-k8s/oct) | [Highlight](https://github.com/sebrandon1/redhat-highlights/blob/main/HIGHLIGHTS.md#2026-02-04-improved-oct-adoption)*
