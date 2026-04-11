@@ -15,6 +15,12 @@ See also: [redhat-highlights](https://github.com/sebrandon1/redhat-highlights) f
 | [Why Use OCT: Fresh Certification Data for Disconnected Environments](posts/why-use-oct-for-certification-testing.md) | Brandon Palm | February 2026 | How OCT provides fresh certification data for air-gapped testing environments |
 | [Why Use Certsuite: Your Fast Track to CNF Certification](posts/why-use-certsuite-for-cnf-certification.md) | Brandon Palm | February 2026 | How certsuite helps partners validate CNF workloads against Red Hat best practices before certification |
 
+### Security & Compliance
+
+| Title | Author | Date | Description |
+|-------|--------|------|-------------|
+| [Continuous TLS Compliance Monitoring for OpenShift: Closing the Gap with the Upstream Scanner](posts/tls-compliance-operator-feature-parity.md) | Brandon Palm | April 2026 | How we added PQC compliance, SSLv3 detection, forward secrecy, and IPv6 support to the tls-compliance-operator |
+
 ### Automation & Tooling
 
 | Title | Author | Date | Description |
