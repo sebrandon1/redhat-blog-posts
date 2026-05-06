@@ -19,6 +19,7 @@ See also: [redhat-highlights](https://github.com/sebrandon1/redhat-highlights) f
 
 | Title | Author | Date | Description |
 |-------|--------|------|-------------|
+| [See What Your Cluster Is Really Serving: TLS Visibility with the tls-compliance-operator](posts/tls-compliance-operator-cluster-visibility.md) | Brandon Palm | May 2026 | How the tls-compliance-operator gives you immediate visibility into TLS versions, cipher grades, certificate health, and PQC readiness across your cluster |
 | [Continuous TLS Compliance Monitoring for OpenShift: Closing the Gap with the Upstream Scanner](posts/tls-compliance-operator-feature-parity.md) | Brandon Palm | April 2026 | How we added PQC compliance, SSLv3 detection, forward secrecy, and IPv6 support to the tls-compliance-operator |
 
 ### Automation & Tooling
